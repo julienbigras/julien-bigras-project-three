@@ -89,7 +89,7 @@ const musicRecommendations = {
         {
             artist: "Simple Plan",
             title: "No Pads, No Helmets...Just Balls",
-            url: "assets/barkley-simple-plan-no-pads-no-helmets-just-balls.jpg",
+            url: "assets/barkley-simple-plan-no-pads-no-helmet-just-balls.jpg",
             canCon: "canConYes"
         },
         {
@@ -151,13 +151,16 @@ const musicRecommendations = {
     ]
 }
 
-// function randomMusicRecommendation(optionsArray) {
-//     const index = Math.floor(Math.random() * optionsArray.length);
-//     return optionsArray[index];
-// }
-
+function randomMusicRecommendation(optionsArray) {
+    const index = Math.floor(Math.random() * optionsArray.length);
+    return optionsArray[index];
+}
 
 $(function () {
+
+let genre;
+let genreChoice;
+let answer;
 
     $('header input').on('click', function(event) {           //the button on the first page
         event.preventDefault();
@@ -172,43 +175,66 @@ $(function () {
     $('.question1 form').on('submit', function(event) {
         event.preventDefault();
 
-        const answer = $('input[name=genre]:checked').val()
-        console.log(answer);
+        answer = $('input[name=genre]:checked').val()
 
         if (!answer) {
-            alert('please make a selection!');
+            $('.alert').removeClass('disappear');
             return;
         }
 
         $('.question1').addClass('disappear');
         $('.question2').removeClass('disappear');
-        
-        const genre = $('input[name=genre]:checked').val();
+
+        genre = $('input[name=genre]:checked').val();
         console.log(genre);
-        
-        const genreChoice = musicRecommendations[genre];
+
+        genreChoice = musicRecommendations[genre];
         console.log(genreChoice)
 
     });
 
-    $('.question2 form').on('submit', function (event) {
+    $('.question2 form').on('submit', function(event) {
         event.preventDefault();
+
+        answer = $('input[name=canCon]:checked').val()
+
+        if (!answer) {
+            $('.alert2').removeClass('disappear');
+            return;
+        }
 
         const canCon = $('input[name=canCon]:checked').val();
         console.log(canCon);
 
-        const recommendationPool = [];
-
-        for (let i = 0; i < genreChoice.length; i++) {
-            const musicOptions = genreChoice[i];
-
-            if (musicOptions.canCon === canCon) {
-                recommendationPool.push(musicOptions);
-                console.log(musicOptions);
+        const recommendationPool = genreChoice.filter(function(value) {
+            if (value.canCon === canCon) {
+                return value;
             }
-        }
+        });
 
-        $('.question2').addClass('disappear');
+        // for (let i = 0; i < genreChoice.length; i++) {
+        //     const musicOptions = genreChoice[i];
 
+        //     if (musicOptions.canCon === canCon) {
+        //         recommendationPool.push(musicOptions);
+        //         console.log(musicOptions);
+        //     }
+        // }
+
+        // $('.question2').addClass('disappear');
+
+        const finalPick = randomMusicRecommendation(recommendationPool);
+        console.log(finalPick);
+
+        $('main').addClass('disappear');
+        $('footer').removeClass('disappear');
+
+        $('footer .results')
+            .append(`<h2>${finalPick.artist} - ${finalPick.title}!</h2>`)
+            .append(`<img src="${finalPick.url}">`);
+    });
+
+    $('footer input').on('click', function() {
+        location.reload(true);
     });
 });

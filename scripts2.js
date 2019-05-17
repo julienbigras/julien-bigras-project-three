@@ -152,8 +152,6 @@ const musicRecommendations = {
 }
 
 
-
-
 $(function() {
 
     function randomMusicRecommendation(optionsArray) {
@@ -190,16 +188,22 @@ $(function() {
         const genreChoice = musicRecommendations[genre];
         console.log(genreChoice);
 
-        const recommendationPool = [];
-
-        for (let i = 0; i < genreChoice.length; i++) {
-            const musicOptions = genreChoice[i];
-
-            if (musicOptions.canCon === canCon) {
-                recommendationPool.push(musicOptions);
-                console.log(recommendationPool);
+        const recommendationPool = genreChoice.filter(function(value) {
+            if (value.canCon === canCon) {
+                return value;
             }
-        }
+        });
+
+        console.log(recommendationPool);
+
+        // for (let i = 0; i < genreChoice.length; i++) {
+        //     const musicOptions = genreChoice[i];
+
+        //     if (musicOptions.canCon === canCon) {
+        //         recommendationPool.push(musicOptions);
+        //         console.log(recommendationPool);
+        //     }
+        // }
 
         const finalPick = randomMusicRecommendation(recommendationPool);
         console.log(finalPick);

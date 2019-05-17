@@ -1,12 +1,13 @@
 @import "partials/setup";
+@import "partials/questions";
 
 .headerPic {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 
 header .landing {
-    height: 80vh;
+    height: 100vh;
 }
 
 .disappear {

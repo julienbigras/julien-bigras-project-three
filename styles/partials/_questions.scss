@@ -1,0 +1,14 @@
+fieldset {
+    border: none;
+    // text-align: center;
+    h2 {
+        margin: 5% 0;
+    }
+    .answerOptions {
+        display: flex;
+        flex-direction: column;
+        .answer {
+            display: flex;
+        }
+    }
+}

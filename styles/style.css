@@ -177,12 +177,29 @@ a {
   margin: 0 auto;
   max-width: 1600px; }
 
+fieldset {
+  border: none; }
+  fieldset h2 {
+    margin: 5% 0; }
+  fieldset .answerOptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    fieldset .answerOptions .answer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+
 .headerPic {
-  width: 70%;
+  width: 60%;
   margin: 0 auto; }
 
 header .landing {
-  height: 80vh; }
+  height: 100vh; }
 
 .disappear {
   display: none; }

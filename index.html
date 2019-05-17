@@ -34,22 +34,30 @@
     </div>
 </header>
 
-<main class="disappear">
-    <section class="question1">
+<main class="disappear wrapper">
+    <section class="question question1">
         <form action="">
 
             <fieldset>
-                <p>Okay, here we go! Question 1:</p>
-                <p>Which genre of music do you feel like listening to?</p>
+                <h2>Okay, here we go! Question 1:</h2>
+                <p>Which <span>genre</span> of music do you feel like listening to?</p>
 
-                <label for="rock">rock</label>
-                <input type="radio" id="rock" name="genre" value="rock">
+                <div class="answerOptions">
+                    <div class="answer">
+                        <input type="radio" id="rock" name="genre" value="rock">
+                        <label for="rock">rock</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="popPunk" name="genre" value="popPunk">
+                        <label for="popPunk">pop-punk</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="metal" name="genre" value="metal">
+                        <label for="metal">metal</label>
+                    </div>
+                </div>
 
-                <label for="popPunk">pop-punk</label>
-                <input type="radio" id="popPunk" name="genre" value="popPunk">
-
-                <label for="metal">metal</label>
-                <input type="radio" id="metal" name="genre" value="metal">
+                <p class="alert disappear">You forgot to make a selection!</p>
 
                 <label for="nextQuestion" class="visuallyHidden"></label>
                 <input type="submit" id="nextQuestion" value="Next Question"></input>
@@ -58,18 +66,25 @@
         </form>
     </section>
 
-    <section class="question2 disappear"> 
+    <section class="question question2 disappear"> 
         <form action="">
 
             <fieldset>
-                <p>Question 2:</p>
+                <h2>Great choice! Question 2:</h2>
                 <p>How's that Canadian pride? Would you like to listen to a Canadian band?</p>
 
-                <label for="canConYes">Heck yeah, give me some Canadian content!</label>
-                <input type="radio" id="canConYes" name="canCon" value="canConYes">
+                <div class="answerOptions">
+                    <div class="answer">
+                        <input type="radio" id="canConYes" name="canCon" value="canConYes">
+                        <label for="canConYes">Heck yeah, give me some Canadian content!</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" id="canConNo" name="canCon" value="canConNo">
+                        <label for="canConNo">Nah, show me something from elsewhere</label>
+                    </div>
+                </div>
                 
-                <label for="canConNo">Nah, show me something from elsewhere</label>
-                <input type="radio" id="canConNo" name="canCon" value="canConNo">
+                <p class="alert2 disappear">You forgot to make a selection!</p>
 
                 <label for="nextQuestion2" class="visuallyHidden"></label>
                 <input type="submit" id="nextQuestion2" value="Next Question"></input>
@@ -77,9 +92,7 @@
             </fieldset>
         </form>
     </section>
-    <section class="result">
 
-    </section>
 <!-- 
     <section class="question3a disappear">
         <form action="">
@@ -105,6 +118,18 @@
     </section> -->
 
 </main>
+
+<footer class="wrapper disappear">
+
+    <div class="results">
+        <h2>Your musical recommendation is...</h2>
+
+    </div>
+
+    <label for="reset" class="visuallyHidden"></label>
+    <input type="submit" id="reset" value="get another suggestion!"></input>
+
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="scripts.js"></script>
