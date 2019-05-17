@@ -6,9 +6,17 @@
 }
 
 header .landing {
-    height: 100vh;
+    height: 80vh;
 }
 
 .disappear {
     display: none;
+}
+
+footer {
+    max-height: 100vh;
+    img {
+        width: 80%;
+        margin: 0 auto;
+    }
 }

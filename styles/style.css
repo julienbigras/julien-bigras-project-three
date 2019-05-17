@@ -182,7 +182,13 @@ a {
   margin: 0 auto; }
 
 header .landing {
-  height: 100vh; }
+  height: 80vh; }
 
 .disappear {
   display: none; }
+
+footer {
+  max-height: 100vh; }
+  footer img {
+    width: 80%;
+    margin: 0 auto; }
