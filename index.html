@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Julien Bigras - Project 3</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -16,6 +18,10 @@
             <div class="headerPic">
                 <img src="assets/barkley-header.jpg" alt="">
             </div>
+
+            <label for="start" class="visuallyHidden"></label>
+            <input type="submit" id="start" value="Let's Go!"></input>
+
         </section>
         <!-- <section class="intro">
             <h2>Hi, I'm Barkley!</h2>
@@ -29,8 +35,7 @@
         </section> -->
 
 
-        <label for="start" class="visuallyHidden"></label>
-        <input type="submit" id="start" value="Let's Go!"></input>
+
     </div>
 </header>
 
@@ -44,16 +49,19 @@
 
                 <div class="answerOptions">
                     <div class="answer">
-                        <input type="radio" id="rock" name="genre" value="rock">
                         <label for="rock">rock</label>
+                        <input type="radio" id="rock" name="genre" value="rock">
+                        <span class="checkmark"></span>
                     </div>
                     <div class="answer">
-                        <input type="radio" id="popPunk" name="genre" value="popPunk">
                         <label for="popPunk">pop-punk</label>
+                        <input type="radio" id="popPunk" name="genre" value="popPunk">
+                        <span class="checkmark"></span>
                     </div>
                     <div class="answer">
-                        <input type="radio" id="metal" name="genre" value="metal">
                         <label for="metal">metal</label>
+                        <input type="radio" id="metal" name="genre" value="metal">
+                        <span class="checkmark"></span>
                     </div>
                 </div>
 
@@ -75,12 +83,14 @@
 
                 <div class="answerOptions">
                     <div class="answer">
-                        <input type="radio" id="canConYes" name="canCon" value="canConYes">
                         <label for="canConYes">Heck yeah, give me some Canadian content!</label>
+                        <input type="radio" id="canConYes" name="canCon" value="canConYes">
+                        <span class="checkmark"></span>
                     </div>
                     <div class="answer">
-                        <input type="radio" id="canConNo" name="canCon" value="canConNo">
                         <label for="canConNo">Nah, show me something from elsewhere</label>
+                        <input type="radio" id="canConNo" name="canCon" value="canConNo">
+                        <span class="checkmark"></span>
                     </div>
                 </div>
                 
@@ -121,13 +131,20 @@
 
 <footer class="wrapper disappear">
 
-    <div class="results">
+    <div class="resultsTitle">
         <h2>Your musical recommendation is...</h2>
-
     </div>
-
-    <label for="reset" class="visuallyHidden"></label>
-    <input type="submit" id="reset" value="get another suggestion!"></input>
+    <div class="results">
+        <div class="resultsPic"></div>
+        <div class="resultsInfo">
+                <label for="reset" class="visuallyHidden"></label>
+                <input type="submit" id="reset" value="get another suggestion!"></input>
+        </div>
+    </div>
+    
+    <p>You can check out Barkley's Instagram page by clicking <i class="far fa-hand-point-right"></i>
+        <a href="https://www.instagram.com/barkleythegroupie/" target="_blank"> here </a>
+        <i class="far fa-hand-point-left"></i></p>
 
 </footer>
 
@@ -136,3 +153,5 @@
 
 </body>
 </html>
+
+<!-- back to here if need be -->

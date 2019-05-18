@@ -1,0 +1,18 @@
+footer {
+    height: 100vh;
+    text-align: center;
+}
+
+.results {
+    display: flex;
+    .resultsPic,
+    .resultsInfo {
+        width: 50%;
+    }
+}
+
+.finalPickImage {
+    max-width: 80%;
+    // max-height: 600px;
+    // max-height: 85vh;
+}

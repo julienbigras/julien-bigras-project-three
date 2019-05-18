@@ -1,8 +1,9 @@
 @import "partials/setup";
 @import "partials/questions";
+@import "partials/_resultsPage";
 
 .headerPic {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -12,12 +13,4 @@ header .landing {
 
 .disappear {
     display: none;
-}
-
-footer {
-    max-height: 100vh;
-    img {
-        width: 80%;
-        margin: 0 auto;
-    }
 }

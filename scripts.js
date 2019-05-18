@@ -38,8 +38,8 @@ const musicRecommendations = {
         },
         {
             artist: "Queens of the Stone Age",
-            title: "Villains",
-            url: "assets/barkley-queens-of-the-stone-age-villains.jpg",
+            title: "...Like Clockwork",
+            url: "assets/barkley-queens-of-the-stone-age-like-clockwork.jpg",
             canCon: "canConNo"
         },
         {
@@ -52,14 +52,14 @@ const musicRecommendations = {
     popPunk: [
         {
             artist: "Blink 182",
-            title: "Blink 182",
-            url: "assets/barkley-blink-182-self-titled.jpg",
+            title: "Take Off Your Pants and Jacket",
+            url: "assets/barkley-blink-182-take-off-your-pants-and-jacket.jpg",
             canCon: "canConNo"
         },
         {
             artist: "Four Year Strong",
-            title: "Enemy of the World",
-            url: "assets/barkley-four-year-strong-enemy-of-the-world.jpg",
+            title: "Explains It All",
+            url: "assets/barkley-four-year-strong-explains-it-all.jpg",
             canCon: "canConNo"
         },
         {
@@ -89,7 +89,7 @@ const musicRecommendations = {
         {
             artist: "Simple Plan",
             title: "No Pads, No Helmets...Just Balls",
-            url: "assets/barkley-simple-plan-no-pads-no-helmet-just-balls.jpg",
+            url: "assets/barkley-simple-plan-no-pads-no-helmets-just-balls.jpg",
             canCon: "canConYes"
         },
         {
@@ -138,8 +138,8 @@ const musicRecommendations = {
         },
         {
             artist: "Protest the Hero",
-            title: "Fortress",
-            url: "assets/barkley-protest-the-hero-fortress.jpg",
+            title: "Scurrilous",
+            url: "assets/barkley-protest-the-hero-scurrilous.jpg",
             canCon: "canConYes"
         },
         {
@@ -153,8 +153,26 @@ const musicRecommendations = {
 
 function randomMusicRecommendation(optionsArray) {
     const index = Math.floor(Math.random() * optionsArray.length);
-    return optionsArray[index];
+    const finalPick = optionsArray[index];
+    
+    $('main').addClass('disappear');
+    $('footer').removeClass('disappear');
+
+    $('footer .resultsTitle')
+        .append(`<h2>${finalPick.artist} - ${finalPick.title}!</h2>`);
+    $('footer .resultsPic')
+        .append(`<div class="finalPickImage ${finalPick.orientation}">
+                <img src="${finalPick.url}">
+                <div>`);
 }
+
+const headerListener = function() {
+    $('header input').on('click', function (event) {           //the button on the first page
+        event.preventDefault();
+        $('header').addClass('disappear');                    //hides header section
+        $('main').removeClass('disappear');                   //displays first question
+    });
+};
 
 $(function () {
 
@@ -162,36 +180,32 @@ let genre;
 let genreChoice;
 let answer;
 
-    $('header input').on('click', function(event) {           //the button on the first page
-        event.preventDefault();
-        $('header').addClass('disappear');                    //hides header section
-        $('main').removeClass('disappear');                   //displays first question
-    });
+    headerListener();
 
-    // $('input[name=genre]').on('click', function(){
-    //     $('#nextQuestion').prop('disabled', false);
-    // })
+    // $('header input').on('click', function(event) {           //the button on the first page
+    //     event.preventDefault();
+    //     $('header').addClass('disappear');                    //hides header section
+    //     $('main').removeClass('disappear');                   //displays first question
+    // });
 
     $('.question1 form').on('submit', function(event) {
         event.preventDefault();
 
         answer = $('input[name=genre]:checked').val()
-
         if (!answer) {
             $('.alert').removeClass('disappear');
             return;
         }
 
+        genre = $('input[name=genre]:checked').val();
+        // console.log(genre);
+        genreChoice = musicRecommendations[genre];
+        // console.log(genreChoice)
+
         $('.question1').addClass('disappear');
         $('.question2').removeClass('disappear');
-
-        genre = $('input[name=genre]:checked').val();
-        console.log(genre);
-
-        genreChoice = musicRecommendations[genre];
-        console.log(genreChoice)
-
     });
+
 
     $('.question2 form').on('submit', function(event) {
         event.preventDefault();
@@ -212,29 +226,22 @@ let answer;
             }
         });
 
-        // for (let i = 0; i < genreChoice.length; i++) {
-        //     const musicOptions = genreChoice[i];
-
-        //     if (musicOptions.canCon === canCon) {
-        //         recommendationPool.push(musicOptions);
-        //         console.log(musicOptions);
-        //     }
-        // }
-
         // $('.question2').addClass('disappear');
 
-        const finalPick = randomMusicRecommendation(recommendationPool);
-        console.log(finalPick);
+        // const finalPick =  
+        randomMusicRecommendation(recommendationPool);
+        // console.log(finalPick);
 
-        $('main').addClass('disappear');
-        $('footer').removeClass('disappear');
+        // $('main').addClass('disappear');
+        // $('footer').removeClass('disappear');
 
-        $('footer .results')
-            .append(`<h2>${finalPick.artist} - ${finalPick.title}!</h2>`)
-            .append(`<img src="${finalPick.url}">`);
+        // $('footer .results')
+        //     .append(`<h2>${finalPick.artist} - ${finalPick.title}!</h2>`)
+        //     .append(`<img src="${finalPick.url}">`);
     });
 
     $('footer input').on('click', function() {
         location.reload(true);
     });
+
 });
