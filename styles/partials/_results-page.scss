@@ -1,0 +1,33 @@
+footer {
+    max-height: 100vh;
+    text-align: center;
+    h2 {
+        margin: 20px 0;
+    }
+}
+
+.results {
+    display: flex;
+    .resultsPic {
+        width: 45%;
+    }
+    .resultsInfo {
+        width: 55%;
+        text-align: left;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            // margin: 0 auto;
+        }
+        .reset {
+            // align-self: flex-end;
+        }
+    }
+}
+
+.finalPickImage {
+    width: 95%;
+}

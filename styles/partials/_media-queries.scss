@@ -1,0 +1,19 @@
+@media (max-width: 1000px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 760px) {
+    .results {
+        flex-direction: column;
+        .resultsPic,
+        .resultsInfo {
+            width: 100%;
+        }
+    }
+
+    .finalPickImage {
+        width: 100%;
+    }
+}

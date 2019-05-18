@@ -4,49 +4,57 @@ const musicRecommendations = {
             artist: "Billy Talent",
             title: "Billy Talent",
             url: "assets/barkley-billy-talent-self-titled.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Foo Fighters",
             title: "The Color and The Shape",
             url: "assets/barkley-foo-fighters-the-color-and-the-shape.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Finger Eleven",
             title: "Five Crooked Lines",
             url: "assets/barkley-finger-eleven-five-crooked-lines.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Incubus",
             title: "Make Yourself",
             url: "assets/barkley-incubus-make-yourself.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Our Lady Peace",
             title: "Happiness...Is Not a Fish That You Can Catch",
             url: "assets/barkley-our-lady-peace-happiness.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Matthew Good Band",
             title: "Beautiful Midnight",
             url: "assets/barkley-matthew-good-band-beautiful-midnight.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Queens of the Stone Age",
             title: "...Like Clockwork",
             url: "assets/barkley-queens-of-the-stone-age-like-clockwork.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Red Hot Chili Peppers",
             title: "By the Way",
             url: "assets/barkley-red-hot-chili-peppers-by-the-way.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
     ],
     popPunk: [
@@ -164,6 +172,8 @@ function randomMusicRecommendation(optionsArray) {
         .append(`<div class="finalPickImage ${finalPick.orientation}">
                 <img src="${finalPick.url}">
                 <div>`);
+    $('footer .resultsInfo')
+        .prepend(`<p>${finalPick.info}</p>`);
 }
 
 const headerListener = function() {

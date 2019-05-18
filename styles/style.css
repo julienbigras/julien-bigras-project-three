@@ -195,20 +195,57 @@ fieldset {
       display: -ms-flexbox;
       display: flex; }
 
+input[type=submit] {
+  text-transform: uppercase; }
+
 footer {
-  height: 100vh;
+  max-height: 100vh;
   text-align: center; }
+  footer h2 {
+    margin: 20px 0; }
 
 .results {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .results .resultsPic,
+  .results .resultsPic {
+    width: 45%; }
   .results .resultsInfo {
-    width: 50%; }
+    width: 55%;
+    text-align: left;
+    margin-left: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .finalPickImage {
-  max-width: 80%; }
+  width: 95%; }
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 90%; } }
+
+@media (max-width: 760px) {
+  .results {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .results .resultsPic,
+    .results .resultsInfo {
+      width: 100%; }
+  .finalPickImage {
+    width: 100%; } }
 
 .headerPic {
   width: 50%;
