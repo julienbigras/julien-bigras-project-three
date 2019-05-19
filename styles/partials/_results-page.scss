@@ -1,8 +1,12 @@
 footer {
-    max-height: 100vh;
+    background: $bgColour;
+    height: 100vh;
     text-align: center;
     h2 {
         margin: 20px 0;
+    }
+    .footerBottom {
+        margin-top: 3.5%;
     }
 }
 
@@ -20,10 +24,8 @@ footer {
         justify-content: center;
         align-items: center;
         p {
-            // margin: 0 auto;
-        }
-        .reset {
-            // align-self: flex-end;
+            padding: 30px;
+            border: 3px solid black;
         }
     }
 }
@@ -31,3 +33,5 @@ footer {
 .finalPickImage {
     width: 95%;
 }
+
+

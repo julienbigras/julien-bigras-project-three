@@ -178,6 +178,10 @@ a {
   margin: 0 auto;
   max-width: 1600px; }
 
+h1,
+h2 {
+  font-family: "Metal Mania"; }
+
 fieldset {
   border: none; }
   fieldset h2 {
@@ -199,10 +203,13 @@ input[type=submit] {
   text-transform: uppercase; }
 
 footer {
-  max-height: 100vh;
+  background: #555358;
+  height: 100vh;
   text-align: center; }
   footer h2 {
     margin: 20px 0; }
+  footer .footerBottom {
+    margin-top: 3.5%; }
 
 .results {
   display: -webkit-box;
@@ -227,13 +234,18 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    .results .resultsInfo p {
+      padding: 30px;
+      border: 3px solid black; }
 
 .finalPickImage {
   width: 95%; }
 
 @media (max-width: 1000px) {
   .wrapper {
-    width: 90%; } }
+    width: 90%; }
+  .headerPic {
+    width: 80%; } }
 
 @media (max-width: 760px) {
   .results {
@@ -244,15 +256,27 @@ footer {
     .results .resultsPic,
     .results .resultsInfo {
       width: 100%; }
+    .results .resultsInfo {
+      margin: 30px 0 0 0; }
   .finalPickImage {
     width: 100%; } }
 
-.headerPic {
-  width: 50%;
-  margin: 0 auto; }
-
-header .landing {
-  height: 100vh; }
-
 .disappear {
   display: none; }
+
+header {
+  background: #555358;
+  height: 100vh; }
+  header .headerPic {
+    width: 52.5%;
+    margin: 0 auto;
+    -webkit-box-shadow: 20px 20px blue;
+    box-shadow: 20px 20px blue;
+    border-radius: 15px; }
+    header .headerPic img {
+      border-radius: 15px; }
+
+main {
+  background: #555358; }
+  main .question {
+    height: 100vh; }

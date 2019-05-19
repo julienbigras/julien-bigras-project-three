@@ -1,18 +1,36 @@
+//VARIABLES
+
+$bgColour: #555358;
+
 @import "partials/setup";
 @import "partials/questions";
 @import "partials/button";
 @import "partials/results-page";
 @import "partials/media-queries";
 
-.headerPic {
-    width: 50%;
-    margin: 0 auto;
-}
-
-header .landing {
-    height: 100vh;
-}
-
 .disappear {
     display: none;
 }
+
+header {
+    background: $bgColour;
+    height: 100vh;
+    .headerPic {
+        width: 52.5%;
+        margin: 0 auto;
+        box-shadow: 20px 20px blue;
+        border-radius: 15px;
+        img {
+            border-radius: 15px;
+        }
+    }
+}
+
+main {
+    background: $bgColour;
+    .question {
+        height: 100vh;
+    }
+}
+
+

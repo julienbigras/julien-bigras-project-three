@@ -167,7 +167,7 @@ function randomMusicRecommendation(optionsArray) {
     $('footer').removeClass('disappear');
 
     $('footer .resultsTitle')
-        .append(`<h2>${finalPick.artist} - ${finalPick.title}!</h2>`);
+        .append(`<h2>${finalPick.artist} - ${finalPick.title}</h2>`);
     $('footer .resultsPic')
         .append(`<div class="finalPickImage ${finalPick.orientation}">
                 <img src="${finalPick.url}">
