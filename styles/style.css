@@ -301,15 +301,20 @@ input[type=submit] {
   color: #DD0000;
   text-transform: uppercase;
   border: 3px solid black;
-  padding: 12px 25px;
+  padding: 12px 20px;
   border-radius: 10px;
   font-family: "Roboto";
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
 
 input[type=submit]:hover,
 input[type=submit]:focus {
+  padding: 12px 30px;
   background-color: #DD0000;
-  color: whitesmoke; }
+  color: whitesmoke;
+  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important; }
 
 footer {
   height: 100vh;
@@ -369,38 +374,6 @@ footer {
   .footer-bottom a:focus {
     border-bottom: 3px solid #DD0000; }
 
-@media (max-width: 1200px) {
-  .wrapper {
-    width: 90%; }
-  h1 {
-    font-size: 2.5rem; }
-  header .header-pic {
-    width: 80%; } }
-
-@media (max-width: 760px) {
-  h2 {
-    font-size: 2rem; }
-  .results {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .results .results-pic,
-    .results .results-info {
-      width: 90%; }
-    .results .results-info {
-      margin: 30px 0 0 0; }
-      .results .results-info p {
-        width: 100%; }
-  .final-pick-image {
-    margin: 0;
-    width: 100%; }
-  .footer-bottom input[type=submit] {
-    margin-bottom: 5%; } }
-
 .disappear {
   display: none; }
 
@@ -424,3 +397,51 @@ header {
     header .header-pic img {
       border-radius: 15px;
       border: 3px solid black; }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90%; }
+  h1 {
+    font-size: 2.5rem; }
+  header .header-pic {
+    width: 60%; } }
+
+@media (max-width: 760px) {
+  input[type=submit]:hover,
+  input[type=submit]:focus {
+    padding: 12px 20px; }
+  h1 {
+    font-size: 2.2rem;
+    padding: 0 1% 2%; }
+  header p {
+    padding: 2.5% 0;
+    font-size: 0.9rem; }
+  header .header-pic {
+    width: 90%;
+    margin-bottom: 3%; }
+  h2 {
+    font-size: 2rem; }
+  fieldset {
+    padding: 15px; }
+    fieldset p {
+      font-size: 0.9rem; }
+  .results {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .results .results-pic,
+    .results .results-info {
+      width: 90%; }
+    .results .results-info {
+      margin: 30px 0 0 0; }
+      .results .results-info p {
+        width: 100%; }
+  .final-pick-image {
+    margin: 0;
+    width: 100%; }
+  .footer-bottom input[type=submit] {
+    margin-bottom: 5%; } }

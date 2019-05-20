@@ -3,7 +3,6 @@
 @import "partials/questions";
 @import "partials/button";
 @import "partials/results-page";
-@import "partials/media-queries";
 
 .disappear {
     display: none;
@@ -34,3 +33,4 @@ header {
         }
     }
 }
+@import "partials/media-queries";
