@@ -43,23 +43,78 @@ fieldset {
     }
 }
 
-input[type=radio]:focus {
-    border: $border;
-}
-
 label {
     text-transform: uppercase;
     padding: 3px 0;
 }
 
-// info on custom radio button styling found here:
-// https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+// .answer {
+//     display: block;
+//     position: relative;
+//     cursor: pointer;
+//     input[type=radio] {
+//         position: absolute;
+//         height: 0;
+//         width: 0;
+//         opacity: 0;
+//     }
+//     label {
+//         display: block;
+//         position: relative;
+//         padding: 30px 25px 25px 60px;
+//         height: 10px;
+//         cursor: pointer;
+//     }
+//     .checkmark {
+//         display: block;
+//         position: absolute;
+//         border: 5px solid black;
+//         border-radius: 100%;
+//         height: 30px;
+//         width: 30px;
+//         top: 30px;
+//         left: 20px;
+//     }
+//     .checkmark::before {
+//     display: block;
+//     position: absolute;
+// 	content: "";
+//     border-radius: 100%;
+//     height: 15px;
+//     width: 15px;
+//     top: 3px;
+// 	left: 3px;
+//     margin: auto;
+//     }
+// }
+
+// .answer:hover label,
+// .answer:focus label,
+// .answer:hover .checkmark,
+// .answer:focus .checkmark {
+//     color: darkgrey;
+// }
+
+// input[type=radio]:checked ~ .checkmark {
+//     border: 5px solid $accent;
+// }
+
+// input[type=radio]:checked ~ .checkmark::before{
+//     background: $accent;
+// }
+
+// input[type=radio]:checked ~ label{
+//     color: $accent;
+// }
+
+/* radio button styling modeled using info found here:
+https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
 
 .answer {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     cursor: pointer;
     input {
         position: absolute;
@@ -68,14 +123,22 @@ label {
         height: 0;
         width: 0;
     }
+    label {
+        cursor: pointer;
+    }
     .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #ccc;
-    border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #ccc;
+        border-radius: 50%;
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
     }
 }
 
@@ -87,18 +150,15 @@ label {
 .answer input:checked ~ .checkmark {
     background-color: $accent;
 }
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+
+.answer input:checked ~ label {
+    color: $accent;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .answer input:checked ~ .checkmark:after {
     display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .answer .checkmark:after {
     top: 9px;
     left: 9px;

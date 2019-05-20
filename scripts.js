@@ -199,6 +199,10 @@ const musicRecommendations = {
     ]
 }
 
+let genre;
+let genreChoice;
+let answer;
+
 //this function randomly chooses an index number from the array of options created after user input
 function randomMusicRecommendation(optionsArray) {
     const index = Math.floor(Math.random() * optionsArray.length);
@@ -225,14 +229,23 @@ const headerListener = function() {
     });
 };
 
+const warningReset = function(alertClass) {
+    $('input').on('click', function () {
+        $(alertClass).addClass('disappear');
+    });
+}
+
+const refresh = function() {
+    $('footer input').on('click', function() {
+        location.reload(true);
+    });
+};
+
 //document ready
 $(function () {
 
-let genre;
-let genreChoice;
-let answer;
-
     headerListener();
+    warningReset('.alert');
 
     $('.question1 form').on('submit', function(event) {
         event.preventDefault();
@@ -242,16 +255,15 @@ let answer;
             $('.alert').removeClass('disappear');
             return;
         }
-        
+
         genre = $('input[name=genre]:checked').val();
-        // console.log(genre);
         genreChoice = musicRecommendations[genre];
-        // console.log(genreChoice)
 
         $('.question1').addClass('disappear');
         $('.question2').removeClass('disappear');
     });
 
+    warningReset('.alert2');
 
     $('.question2 form').on('submit', function(event) {
         event.preventDefault();
@@ -264,7 +276,6 @@ let answer;
         }
 
         const canCon = $('input[name=canCon]:checked').val();
-        console.log(canCon);
 
         const recommendationPool = genreChoice.filter(function(value) {
             if (value.canCon === canCon) {
@@ -272,22 +283,8 @@ let answer;
             }
         });
 
-        // $('.question2').addClass('disappear');
-
-        // const finalPick =  
         randomMusicRecommendation(recommendationPool);
-        // console.log(finalPick);
-
-        // $('main').addClass('disappear');
-        // $('footer').removeClass('disappear');
-
-        // $('footer .results')
-        //     .append(`<h2>${finalPick.artist} - ${finalPick.title}!</h2>`)
-        //     .append(`<img src="${finalPick.url}">`);
     });
 
-    $('footer input').on('click', function() {
-        location.reload(true);
-    });
-
+    refresh();
 });
