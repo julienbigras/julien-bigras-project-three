@@ -1,14 +1,12 @@
 footer {
     height: 100vh;
     text-align: center;
-    p:first-child {
-        padding-top: 20px;
-    }
     h2 {
-        margin: 20px 0;
+        margin: 1% 0 1.5%;
     }
-    .footer-bottom {
-        margin-top: 10px;
+    .results-title p {
+        padding-top: 1%;
+        color: $main-color;
     }
 }
 
@@ -27,16 +25,35 @@ footer {
             width: 82.5%;
             padding: 30px;
             border: $border;
-            background-color: whitesmoke;
+            background-color: $main-color;
             border-radius: 15px;
+            box-shadow: $pic-shadow;
         }
     }
 }
 
 .final-pick-image {
-    width: 72.5%;
-    margin-left: 17.5%;
+    width: 70%;
+    margin-left: 20%;
+    box-shadow: $pic-shadow;
+    border-radius: 15px;
         img {
             border-radius: 15px;
+            border: $border;
         }
+}
+
+.footer-bottom {
+    margin-top: 3%;
+    p {
+        color: $main-color;
+        margin-bottom: 1%;
+    }
+    a {
+        color: $accent;
+    }
+    a:hover,
+    a:focus {
+        border-bottom: 3px solid $accent;
+    }
 }

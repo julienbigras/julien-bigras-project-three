@@ -1,7 +1,10 @@
 //VARIABLES
 
+$main-color: whitesmoke;
+$accent: #DD0000;
 $border: 3px solid black;
-$shadow: 1px 1px black, 3px 3px red;
+$text-shadow: 1px 1px black, 3px 3px $accent;
+$pic-shadow: 10px 10px $accent;
 
 html {
 	font-size: 125%;
@@ -40,15 +43,15 @@ a {
     width: 80%;
     margin: 0 auto;
     max-width: 1600px;
-    height: 100vh;
+    min-height: 100vh;
     background: rgba(20, 20, 20, 0.95);
 }
 
 h1,
 h2 {
     font-family: "Metal Mania";
-    color: whitesmoke;
-    text-shadow: $shadow;
+    color: $main-color;
+    text-shadow: $text-shadow;
 }
 
 h1 {

@@ -177,14 +177,14 @@ a {
   width: 80%;
   margin: 0 auto;
   max-width: 1600px;
-  height: 100vh;
+  min-height: 100vh;
   background: rgba(20, 20, 20, 0.95); }
 
 h1,
 h2 {
   font-family: "Metal Mania";
   color: whitesmoke;
-  text-shadow: 1px 1px black, 3px 3px red; }
+  text-shadow: 1px 1px black, 3px 3px #DD0000; }
 
 h1 {
   font-size: 3rem; }
@@ -197,6 +197,7 @@ label {
   font-family: "Roboto", "sans-serif"; }
 
 .question {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,13 +208,21 @@ label {
     margin: 5% 0;
     text-align: center; }
   .question span {
-    color: red;
+    color: #DD0000;
     font-weight: bold; }
+  .question form {
+    max-width: 80%; }
 
 fieldset {
   border: 3px solid black;
   background-color: whitesmoke;
-  padding: 40px; }
+  padding: 40px;
+  -webkit-box-shadow: 10px 10px #DD0000;
+  box-shadow: 10px 10px #DD0000;
+  border-radius: 15px;
+  text-align: center; }
+  fieldset p:first-child {
+    padding-bottom: 5%; }
   fieldset .answer-options {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -226,12 +235,20 @@ fieldset {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+  fieldset .alert,
+  fieldset .alert2 {
+    color: #DD0000;
+    font-weight: bold;
+    padding: 10px 0; }
+  fieldset input[type=submit] {
+    margin-top: 5%; }
 
 input[type=radio]:focus {
-  border: 1px solid black; }
+  border: 3px solid black; }
 
 label {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 3px 0; }
 
 .answer {
   display: block;
@@ -256,10 +273,10 @@ label {
 
 .answer:hover input ~ .checkmark,
 .answer:focus input ~ .checkmark {
-  background-color: #aaa; }
+  background-color: #555; }
 
 .answer input:checked ~ .checkmark {
-  background-color: #2196F3; }
+  background-color: #DD0000; }
 
 .checkmark:after {
   content: "";
@@ -277,11 +294,11 @@ label {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: white; }
+  background: whitesmoke; }
 
 input[type=submit] {
   background-color: whitesmoke;
-  color: red;
+  color: #DD0000;
   text-transform: uppercase;
   border: 3px solid black;
   padding: 12px 25px;
@@ -289,15 +306,19 @@ input[type=submit] {
   font-family: "Roboto";
   font-weight: bold; }
 
+input[type=submit]:hover,
+input[type=submit]:focus {
+  background-color: #DD0000;
+  color: whitesmoke; }
+
 footer {
   height: 100vh;
   text-align: center; }
-  footer p:first-child {
-    padding-top: 20px; }
   footer h2 {
-    margin: 20px 0; }
-  footer .footer-bottom {
-    margin-top: 10px; }
+    margin: 1% 0 1.5%; }
+  footer .results-title p {
+    padding-top: 1%;
+    color: whitesmoke; }
 
 .results {
   display: -webkit-box;
@@ -323,36 +344,62 @@ footer {
       padding: 30px;
       border: 3px solid black;
       background-color: whitesmoke;
-      border-radius: 15px; }
+      border-radius: 15px;
+      -webkit-box-shadow: 10px 10px #DD0000;
+      box-shadow: 10px 10px #DD0000; }
 
 .final-pick-image {
-  width: 72.5%;
-  margin-left: 17.5%; }
+  width: 70%;
+  margin-left: 20%;
+  -webkit-box-shadow: 10px 10px #DD0000;
+  box-shadow: 10px 10px #DD0000;
+  border-radius: 15px; }
   .final-pick-image img {
-    border-radius: 15px; }
+    border-radius: 15px;
+    border: 3px solid black; }
 
-@media (max-width: 1000px) {
+.footer-bottom {
+  margin-top: 3%; }
+  .footer-bottom p {
+    color: whitesmoke;
+    margin-bottom: 1%; }
+  .footer-bottom a {
+    color: #DD0000; }
+  .footer-bottom a:hover,
+  .footer-bottom a:focus {
+    border-bottom: 3px solid #DD0000; }
+
+@media (max-width: 1200px) {
   .wrapper {
     width: 90%; }
-  .header-pic {
+  h1 {
+    font-size: 2.5rem; }
+  header .header-pic {
     width: 80%; } }
 
 @media (max-width: 760px) {
+  h2 {
+    font-size: 2rem; }
   .results {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .results .results-pic,
     .results .results-info {
-      width: 100%; }
+      width: 90%; }
     .results .results-info {
       margin: 30px 0 0 0; }
-    .results p {
-      width: 100%; }
+      .results .results-info p {
+        width: 100%; }
   .final-pick-image {
     margin: 0;
-    width: 100%; } }
+    width: 100%; }
+  .footer-bottom input[type=submit] {
+    margin-bottom: 5%; } }
 
 .disappear {
   display: none; }
@@ -361,20 +408,19 @@ body {
   background: url(../assets/music-notes.png); }
 
 header {
-  height: 100vh; }
-
-.header-pic {
-  width: 47.5%;
-  margin: 2% auto 3%;
-  -webkit-box-shadow: 20px 20px red;
-  box-shadow: 20px 20px red;
-  border-radius: 15px; }
-  .header-pic img {
-    border-radius: 15px;
-    border: 3px solid black; }
-
-.landing {
+  height: 100vh;
   text-align: center; }
-
-main .question {
-  height: 100vh; }
+  header p {
+    color: whitesmoke;
+    padding-top: 1%; }
+  header i {
+    color: #DD0000; }
+  header .header-pic {
+    width: 47.5%;
+    margin: 1% auto 2.5%;
+    -webkit-box-shadow: 10px 10px #DD0000;
+    box-shadow: 10px 10px #DD0000;
+    border-radius: 15px; }
+    header .header-pic img {
+      border-radius: 15px;
+      border: 3px solid black; }

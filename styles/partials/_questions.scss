@@ -1,21 +1,30 @@
 .question {
+    height: 100vh;
     display: flex;
     justify-content: center;
-        h2 {
+    h2 {
         margin: 5% 0;
         text-align: center;
     }
     span {
-        color: red;
+        color:$accent;
         font-weight: bold;
+    }
+    form {
+        max-width: 80%;
     }
 }
 
 fieldset {
-    border: 3px solid black;
-    background-color: whitesmoke;
+    border: $border;
+    background-color: $main-color;
     padding: 40px;
-    // text-align: center;
+    box-shadow: $pic-shadow;
+    border-radius: 15px;
+    text-align: center;
+    p:first-child {
+        padding-bottom: 5%;
+    }
     .answer-options {
         display: flex;
         flex-direction: column;
@@ -23,14 +32,24 @@ fieldset {
             display: flex;
         }
     }
+    .alert,
+    .alert2 {
+        color: $accent;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+    input[type=submit] {
+    margin-top: 5%;
+    }
 }
 
 input[type=radio]:focus {
-    border: 1px solid black;
+    border: $border;
 }
 
 label {
     text-transform: uppercase;
+    padding: 3px 0;
 }
 
 // info on custom radio button styling found here:
@@ -62,11 +81,11 @@ label {
 
 .answer:hover input ~ .checkmark,
 .answer:focus input ~ .checkmark {
-    background-color: #aaa;
+    background-color: #555;
 }
 
 .answer input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: $accent;
 }
 .checkmark:after {
     content: "";
@@ -86,5 +105,5 @@ label {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: white;
+    background: $main-color;
 }

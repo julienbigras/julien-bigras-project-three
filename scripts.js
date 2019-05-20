@@ -30,7 +30,7 @@ const musicRecommendations = {
         },
         {
             artist: "Our Lady Peace",
-            title: "Happiness...Is Not a Fish That You Can Catch",
+            title: "Happiness...",
             url: "assets/barkley-our-lady-peace-happiness.jpg",
             canCon: "canConYes",
             info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
