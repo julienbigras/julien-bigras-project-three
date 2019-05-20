@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Julien Bigras - Project 3</title>
     <link href="https://fonts.googleapis.com/css?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
@@ -15,9 +16,9 @@
 <header>
     <div class="wrapper">
         <section class="landing">
-            <p>Barkley the Groupie presents:</p>
+            <p><i class="fas fa-paw"></i> Barkley the Groupie presents: <i class="fas fa-paw"></i></p>
             <h1>Rock Music Recommendation Generator!</h1>
-            <div class="headerPic">
+            <div class="header-pic">
                 <img src="assets/barkley-header.jpg" alt="">
             </div>
 
@@ -46,11 +47,11 @@
         <section class="question question1">
             <form action="">
 
-                <fieldset>
-                    <h2>Okay, here we go! Question 1:</h2>
-                    <p>Which <span>genre</span> of music do you feel like listening to today?</p>
+                <h2>Okay, here we go! Question 1:</h2>
 
-                    <div class="answerOptions">
+                <fieldset>
+                    <p>Which <span>genre</span> of music do you feel like listening to today?</p>
+                    <div class="answer-options">
                         <div class="answer">
                             <label for="rock">rock</label>
                             <input type="radio" id="rock" name="genre" value="rock">
@@ -70,8 +71,8 @@
 
                     <p class="alert disappear">You forgot to make a selection!</p>
 
-                    <label for="nextQuestion" class="visuallyHidden"></label>
-                    <input type="submit" id="nextQuestion" value="Next Question"></input>
+                    <label for="next-question" class="visuallyHidden"></label>
+                    <input type="submit" id="next-question" value="Next Question"></input>
 
                 </fieldset>
             </form>
@@ -79,12 +80,11 @@
 
         <section class="question question2 disappear"> 
             <form action="">
+                <h2>Great choice! Question 2:</h2>
 
                 <fieldset>
-                    <h2>Great choice! Question 2:</h2>
                     <p>How's that Canadian pride? Would you like to listen to some <span>Canadian</span> content?</p>
-
-                    <div class="answerOptions">
+                    <div class="answer-options">
                         <div class="answer">
                             <label for="canConYes">Heck yeah, give me a Canadian band!</label>
                             <input type="radio" id="canConYes" name="canCon" value="canConYes">
@@ -99,53 +99,30 @@
                     
                     <p class="alert2 disappear">You forgot to make a selection!</p>
 
-                    <label for="nextQuestion2" class="visuallyHidden"></label>
-                    <input type="submit" id="nextQuestion2" value="Next Question"></input>
+                    <label for="next-question2" class="visuallyHidden"></label>
+                    <input type="submit" id="next-question2" value="Next Question"></input>
                     
                 </fieldset>
             </form>
         </section>
         </div> <!--closes wrapper-->
 
-<!-- 
-    <section class="question3a disappear">
-        <form action="">
-    
-            <fieldset>
-                <p>Question 3:</p>
-                <p>How do you feel about harsh vocals (i.e. screaming)?</p>
-    
-                <label for="harshVocals">harsh vocals</label>
-                <input type="radio" id="harshVocals" name="vocals" value="harshVocals">
-    
-                <label for="mixedVocals">mix of harsh and clean vocals</label>
-                <input type="radio" id="mixedVocals" name="vocals" value="mixedVocals">
-    
-                <label for="cleanVocals">clean vocals</label>
-                <input type="radio" id="cleanVocals" name="vocals" value="cleanVocals">
-    
-                <label for="noVocals">no vocals</label>
-                <input type="radio" id="noVocals" name="vocals" value="noVocals">
-    
-            </fieldset>
-        </form>
-    </section> -->
-
 </main>
 
 <footer class="disappear">
     <div class="wrapper">
 
-        <div class="resultsTitle">
+        <div class="results-title">
             <p>Your musical recommendation is...</p>
+            <!--options will be appended here based on user input-->
         </div>
         <div class="results">
-            <div class="resultsPic"></div>
-            <div class="resultsInfo">
+            <div class="results-pic"></div>
+            <div class="results-info">
             </div>
         </div>
         
-        <div class="footerBottom">
+        <div class="footer-bottom">
             <p>You can check out Barkley's Instagram page by clicking <i class="far fa-hand-point-right"></i>
                 <a href="https://www.instagram.com/barkleythegroupie/" target="_blank"> here </a>
                 <i class="far fa-hand-point-left"></i></p>

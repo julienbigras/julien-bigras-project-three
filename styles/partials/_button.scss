@@ -1,3 +1,15 @@
 input[type=submit] {
+    background-color: whitesmoke;
+    color: red;
     text-transform: uppercase;
+    border: $border;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    // cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;
+    // cursor: url(../assets/rock-hand-cursor.jpg), auto;
 }

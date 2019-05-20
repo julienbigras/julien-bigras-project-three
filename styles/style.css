@@ -176,17 +176,45 @@ a {
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  max-width: 1600px; }
+  max-width: 1600px;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.95); }
 
 h1,
 h2 {
-  font-family: "Metal Mania"; }
+  font-family: "Metal Mania";
+  color: whitesmoke;
+  text-shadow: 1px 1px black, 3px 3px red; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+p,
+label {
+  font-family: "Roboto", "sans-serif"; }
+
+.question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .question h2 {
+    margin: 5% 0;
+    text-align: center; }
+  .question span {
+    color: red;
+    font-weight: bold; }
 
 fieldset {
-  border: none; }
-  fieldset h2 {
-    margin: 5% 0; }
-  fieldset .answerOptions {
+  border: 3px solid black;
+  background-color: whitesmoke;
+  padding: 40px; }
+  fieldset .answer-options {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -194,33 +222,92 @@ fieldset {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    fieldset .answerOptions .answer {
+    fieldset .answer-options .answer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
 
-input[type=submit] {
+input[type=radio]:focus {
+  border: 1px solid black; }
+
+label {
   text-transform: uppercase; }
 
+.answer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer; }
+  .answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .answer .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ccc;
+    border-radius: 50%; }
+
+.answer:hover input ~ .checkmark,
+.answer:focus input ~ .checkmark {
+  background-color: #aaa; }
+
+.answer input:checked ~ .checkmark {
+  background-color: #2196F3; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the indicator (dot/circle) when checked */
+.answer input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the indicator (dot/circle) */
+.answer .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white; }
+
+input[type=submit] {
+  background-color: whitesmoke;
+  color: red;
+  text-transform: uppercase;
+  border: 3px solid black;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-family: "Roboto";
+  font-weight: bold; }
+
 footer {
-  background: #555358;
   height: 100vh;
   text-align: center; }
+  footer p:first-child {
+    padding-top: 20px; }
   footer h2 {
     margin: 20px 0; }
-  footer .footerBottom {
-    margin-top: 3.5%; }
+  footer .footer-bottom {
+    margin-top: 10px; }
 
 .results {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .results .resultsPic {
-    width: 45%; }
-  .results .resultsInfo {
-    width: 55%;
+  .results .results-pic {
+    width: 50%; }
+  .results .results-info {
+    width: 50%;
     text-align: left;
-    margin-left: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -230,21 +317,24 @@ footer {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .results .resultsInfo p {
+    justify-content: center; }
+    .results .results-info p {
+      width: 82.5%;
       padding: 30px;
-      border: 3px solid black; }
+      border: 3px solid black;
+      background-color: whitesmoke;
+      border-radius: 15px; }
 
-.finalPickImage {
-  width: 95%; }
+.final-pick-image {
+  width: 72.5%;
+  margin-left: 17.5%; }
+  .final-pick-image img {
+    border-radius: 15px; }
 
 @media (max-width: 1000px) {
   .wrapper {
     width: 90%; }
-  .headerPic {
+  .header-pic {
     width: 80%; } }
 
 @media (max-width: 760px) {
@@ -253,30 +343,38 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .results .resultsPic,
-    .results .resultsInfo {
+    .results .results-pic,
+    .results .results-info {
       width: 100%; }
-    .results .resultsInfo {
+    .results .results-info {
       margin: 30px 0 0 0; }
-  .finalPickImage {
+    .results p {
+      width: 100%; }
+  .final-pick-image {
+    margin: 0;
     width: 100%; } }
 
 .disappear {
   display: none; }
 
-header {
-  background: #555358;
-  height: 100vh; }
-  header .headerPic {
-    width: 52.5%;
-    margin: 0 auto;
-    -webkit-box-shadow: 20px 20px blue;
-    box-shadow: 20px 20px blue;
-    border-radius: 15px; }
-    header .headerPic img {
-      border-radius: 15px; }
+body {
+  background: url(../assets/music-notes.png); }
 
-main {
-  background: #555358; }
-  main .question {
-    height: 100vh; }
+header {
+  height: 100vh; }
+
+.header-pic {
+  width: 47.5%;
+  margin: 2% auto 3%;
+  -webkit-box-shadow: 20px 20px red;
+  box-shadow: 20px 20px red;
+  border-radius: 15px; }
+  .header-pic img {
+    border-radius: 15px;
+    border: 3px solid black; }
+
+.landing {
+  text-align: center; }
+
+main .question {
+  height: 100vh; }

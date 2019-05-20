@@ -62,49 +62,57 @@ const musicRecommendations = {
             artist: "Blink 182",
             title: "Take Off Your Pants and Jacket",
             url: "assets/barkley-blink-182-take-off-your-pants-and-jacket.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Four Year Strong",
             title: "Explains It All",
             url: "assets/barkley-four-year-strong-explains-it-all.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Gob",
             title: "Foot in Mouth Disease",
             url: "assets/barkley-gob-foot-in-mouth-disease.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Green Day",
             title: "American Idiot",
             url: "assets/barkley-green-day-american-idiot.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "New Found Glory",
             title: "Sticks and Stones",
             url: "assets/barkley-new-found-glory-sticks-and-stones.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "The Offspring",
             title: "Conspiracy of One",
             url: "assets/barkley-offspring-conspiracy-of-one.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Simple Plan",
             title: "No Pads, No Helmets...Just Balls",
             url: "assets/barkley-simple-plan-no-pads-no-helmets-just-balls.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Sum 41",
             title: "Does This Look Infected?",
             url: "assets/barkley-sum-41-does-this-look-infected.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
     ],
     metal: [
@@ -112,53 +120,62 @@ const musicRecommendations = {
             artist: "Alexisonfire",
             title: "Crisis",
             url: "assets/barkley-alexisonfire-crisis.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Intervals",
             title: "In Time",
             url: "assets/barkley-intervals-in-time.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Lamb of God",
             title: "Sacrament",
             url: "assets/barkley-lamb-of-god-sacrament.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Opeth",
             title: "Ghost Reveries",
             url: "assets/barkley-opeth-ghost-reveries.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Meshuggah",
             title: "The Violent Sleep of Reason",
             url: "assets/barkley-meshuggah-the-violent-sleep-of-reason.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Periphery",
             title: "Periphery III - Select Difficulty",
             url: "assets/barkley-periphery3-select-difficulty.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Protest the Hero",
             title: "Scurrilous",
             url: "assets/barkley-protest-the-hero-scurrilous.jpg",
-            canCon: "canConYes"
+            canCon: "canConYes",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         },
         {
             artist: "Slipknot",
             title: "Iowa",
             url: "assets/barkley-slipknot-iowa.jpg",
-            canCon: "canConNo"
+            canCon: "canConNo",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque quae accusantium fugiat eveniet! Aut, nam temporibus, maiores aliquid dignissimos sed quis numquam earum ut reprehenderit corporis commodi consequatur. Ad?"
         }
     ]
 }
 
+//this function randomly chooses an index number from the array of options created after user input
 function randomMusicRecommendation(optionsArray) {
     const index = Math.floor(Math.random() * optionsArray.length);
     const finalPick = optionsArray[index];
@@ -166,18 +183,19 @@ function randomMusicRecommendation(optionsArray) {
     $('main').addClass('disappear');
     $('footer').removeClass('disappear');
 
-    $('footer .resultsTitle')
+
+    $('footer .results-title')
         .append(`<h2>${finalPick.artist} - ${finalPick.title}</h2>`);
-    $('footer .resultsPic')
-        .append(`<div class="finalPickImage ${finalPick.orientation}">
+    $('footer .results-pic')
+        .append(`<div class="final-pick-image ${finalPick.orientation}">
                 <img src="${finalPick.url}">
                 <div>`);
-    $('footer .resultsInfo')
+    $('footer .results-info')
         .prepend(`<p>${finalPick.info}</p>`);
 }
 
 const headerListener = function() {
-    $('header input').on('click', function (event) {           //the button on the first page
+    $('header input').on('click', function(event) {           //the button on the first page
         event.preventDefault();
         $('header').addClass('disappear');                    //hides header section
         $('main').removeClass('disappear');                   //displays first question

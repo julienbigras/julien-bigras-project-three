@@ -2,7 +2,7 @@
     .wrapper {
         width: 90%;
     }
-    .headerPic {
+    .header-pic {
         width: 80%;
     }
 }
@@ -10,16 +10,20 @@
 @media (max-width: 760px) {
     .results {
         flex-direction: column;
-        .resultsPic,
-        .resultsInfo {
+        .results-pic,
+        .results-info {
             width: 100%;
         }
-        .resultsInfo {
+        .results-info {
             margin: 30px 0 0 0;
+        }
+        p {
+            width: 100%;
         }
     }
 
-    .finalPickImage {
+    .final-pick-image {
+        margin: 0;
         width: 100%;
     }
 }

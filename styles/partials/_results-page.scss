@@ -1,37 +1,42 @@
 footer {
-    background: $bgColour;
     height: 100vh;
     text-align: center;
+    p:first-child {
+        padding-top: 20px;
+    }
     h2 {
         margin: 20px 0;
     }
-    .footerBottom {
-        margin-top: 3.5%;
+    .footer-bottom {
+        margin-top: 10px;
     }
 }
 
 .results {
     display: flex;
-    .resultsPic {
-        width: 45%;
+    .results-pic {
+        width: 50%;
     }
-    .resultsInfo {
-        width: 55%;
+    .results-info {
+        width: 50%;
         text-align: left;
-        margin-left: 10%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         p {
+            width: 82.5%;
             padding: 30px;
-            border: 3px solid black;
+            border: $border;
+            background-color: whitesmoke;
+            border-radius: 15px;
         }
     }
 }
 
-.finalPickImage {
-    width: 95%;
+.final-pick-image {
+    width: 72.5%;
+    margin-left: 17.5%;
+        img {
+            border-radius: 15px;
+        }
 }
-
-
