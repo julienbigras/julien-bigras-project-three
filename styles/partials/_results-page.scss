@@ -3,6 +3,7 @@ footer {
     text-align: center;
     h2 {
         margin: 1% 0 1.5%;
+        max-width: 95%;
     }
     .results-title p {
         padding-top: 1%;
@@ -21,7 +22,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        p {
+        .results-info-text {
             width: 82.5%;
             padding: 30px;
             border: $border;
@@ -30,6 +31,19 @@ footer {
             box-shadow: $pic-shadow;
         }
     }
+}
+
+.results-info-text p:first-child {
+    margin-bottom: 5%;
+}
+
+.results-info-text a {
+    color: $accent;
+}
+
+.results-info-text a:hover,
+.results-info-text a:focus {
+    border-bottom: 3px solid $accent;
 }
 
 .final-pick-image {
@@ -47,7 +61,8 @@ footer {
     margin-top: 3%;
     p {
         color: $main-color;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
+        padding: 0 3px;
     }
     a {
         color: $accent;

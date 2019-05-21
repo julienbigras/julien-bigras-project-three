@@ -2,47 +2,66 @@
     .wrapper {
         width: 90%;
     }
+    //HEADER
     h1 {
         font-size: 2.5rem;
     }
     header .header-pic {
         width: 60%;
     }
+    //RESULTS
+    .results {
+        margin: 5% 0;
+    }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
+    .results {
+        margin: 10% 0;
+    }
+}
+
+@media (max-width: 780px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    p,
+    a {
+        font-size: 0.9rem;
+    }
+
     input[type=submit]:hover,
     input[type=submit]:focus {
     padding: 12px 20px;
     }
 
-//HEADER
+    //HEADER
     h1 {
         font-size: 2.2rem;
         padding: 0 1% 2%;
     }
     header p {
-        padding: 2.5% 0;
-        font-size: 0.9rem;
+        padding: 2% 0;
     }
     header .header-pic {
-        width: 90%;
+        width: 80%;
         margin-bottom: 3%;
+        box-shadow: $pic-shadow-responsive;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-//QUESTIONS
+    //QUESTIONS
     fieldset {
         padding: 15px;
-        p {
-            font-size: 0.9rem;
-        }
+        box-shadow: $pic-shadow-responsive;
     }
 
-//RESULTS PAGE
+    //RESULTS PAGE
     .results {
+        margin: 0;
         flex-direction: column;
         align-items: center;
         .results-pic,
@@ -51,8 +70,9 @@
         }
         .results-info {
             margin: 30px 0 0 0;
-            p {
+            .results-info-text {
                 width: 100%;
+                box-shadow: $pic-shadow-responsive;
             }
         }
     }
@@ -60,6 +80,7 @@
     .final-pick-image {
         margin: 0;
         width: 100%;
+        box-shadow: $pic-shadow-responsive;
     }
 
     .footer-bottom {

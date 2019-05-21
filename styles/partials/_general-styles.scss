@@ -5,6 +5,7 @@ $accent: #DD0000;
 $border: 3px solid black;
 $text-shadow: 1px 1px black, 3px 3px $accent;
 $pic-shadow: 10px 10px $accent;
+$pic-shadow-responsive: 5px 5px $accent;
 
 html {
 	font-size: 125%;
@@ -44,7 +45,6 @@ a {
     margin: 0 auto;
     max-width: 1600px;
     min-height: 100vh;
-    background: rgb(20, 20, 20);
     background: rgba(20, 20, 20, 0.99);
 }
 
@@ -53,6 +53,7 @@ h2 {
     font-family: "Metal Mania";
     color: $main-color;
     text-shadow: $text-shadow;
+    padding: 0 5px;
 }
 
 h1 {
