@@ -1,8 +1,10 @@
 @import "partials/setup";
 @import "partials/general-styles";
+@import "partials/header";
 @import "partials/questions";
 @import "partials/button";
 @import "partials/results-page";
+@import "partials/media-queries";
 
 .disappear {
     display: none;
@@ -10,28 +12,4 @@
 
 body {
     background: url(../assets/music-notes.png);
-    // background: rgb(20, 20, 20);
 }
-
-header {
-    height: 100vh;
-    text-align: center;
-    p {
-        color: $main-color;
-        padding-top: 1%;
-    }
-    i {
-        color: $accent;
-    }
-    .header-pic {
-        width: 47.5%;
-        margin: 1% auto 2.5%;
-        box-shadow: $pic-shadow;
-        border-radius: 15px;
-        img {
-            border-radius: 15px;
-            border: $border;
-        }
-    }
-}
-@import "partials/media-queries";

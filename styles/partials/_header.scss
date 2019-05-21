@@ -1,0 +1,25 @@
+header {
+    height: 100vh;
+    text-align: center;
+    p {
+        font-size: 0.9rem;
+        color: $main-color;
+        padding-top: 1%;
+    }
+    i {
+        color: $accent;
+    }
+    .header-pic {
+        width: 45%;
+        margin: 1% auto 2.5%;
+        box-shadow: $pic-shadow;
+        border-radius: 15px;
+        img {
+            border-radius: 15px;
+            border: $border;
+        }
+    }
+    h3 {
+        margin-bottom: 0.5%;
+    }
+}
