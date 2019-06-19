@@ -27,7 +27,6 @@ footer {
             padding: 30px;
             border: $border;
             background-color: $main-color;
-            border-radius: 15px;
             box-shadow: $pic-shadow;
         }
     }
@@ -50,9 +49,7 @@ footer {
     width: 70%;
     margin-left: 20%;
     box-shadow: $pic-shadow;
-    border-radius: 15px;
         img {
-            border-radius: 15px;
             border: $border;
         }
 }

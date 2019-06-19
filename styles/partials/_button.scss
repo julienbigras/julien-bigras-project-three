@@ -3,8 +3,7 @@ input[type=submit] {
     color: $accent;
     text-transform: uppercase;
     border: $border;
-    padding: 12px 20px;
-    border-radius: 10px;
+    padding: 10px 20px;
     font-family: "Roboto";
     font-weight: bold;
     transition: all .4s;
@@ -12,7 +11,7 @@ input[type=submit] {
 
 input[type=submit]:hover,
 input[type=submit]:focus {
-    padding: 12px 30px;
+    padding: 10px 30px;
     background-color: $accent;
     color: $main-color;
     cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important;

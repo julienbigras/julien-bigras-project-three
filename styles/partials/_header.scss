@@ -10,16 +10,14 @@ header {
         color: $accent;
     }
     .header-pic {
-        width: 45%;
+        width: 43%;
         margin: 1% auto 2.5%;
         box-shadow: $pic-shadow;
-        border-radius: 15px;
         img {
-            border-radius: 15px;
             border: $border;
         }
     }
     h3 {
-        margin-bottom: 0.5%;
+        margin-bottom: 1%;
     }
 }
