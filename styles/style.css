@@ -187,10 +187,10 @@ h2 {
   text-shadow: 1px 1px black, 3px 3px #DD0000; }
 
 h1 {
-  font-size: 2.8rem; }
+  font-size: 2.65rem; }
 
 h2 {
-  font-size: 2.5rem; }
+  font-size: 2.3rem; }
 
 h3 {
   font-family: "Roboto";
@@ -214,16 +214,14 @@ header {
   header i {
     color: #DD0000; }
   header .header-pic {
-    width: 45%;
+    width: 43%;
     margin: 1% auto 2.5%;
     -webkit-box-shadow: 10px 10px #DD0000;
-    box-shadow: 10px 10px #DD0000;
-    border-radius: 15px; }
+    box-shadow: 10px 10px #DD0000; }
     header .header-pic img {
-      border-radius: 15px;
       border: 3px solid black; }
   header h3 {
-    margin-bottom: 0.5%; }
+    margin-bottom: 1%; }
 
 .question {
   height: 100vh;
@@ -249,7 +247,6 @@ fieldset {
   padding: 40px;
   -webkit-box-shadow: 10px 10px #DD0000;
   box-shadow: 10px 10px #DD0000;
-  border-radius: 15px;
   text-align: center; }
   fieldset p:first-child {
     padding-bottom: 5%; }
@@ -330,8 +327,7 @@ input[type=submit] {
   color: #DD0000;
   text-transform: uppercase;
   border: 3px solid black;
-  padding: 12px 20px;
-  border-radius: 10px;
+  padding: 10px 20px;
   font-family: "Roboto";
   font-weight: bold;
   -webkit-transition: all .4s;
@@ -340,7 +336,7 @@ input[type=submit] {
 
 input[type=submit]:hover,
 input[type=submit]:focus {
-  padding: 12px 30px;
+  padding: 10px 30px;
   background-color: #DD0000;
   color: whitesmoke;
   cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym57.cur), auto !important; }
@@ -379,7 +375,6 @@ footer {
       padding: 30px;
       border: 3px solid black;
       background-color: whitesmoke;
-      border-radius: 15px;
       -webkit-box-shadow: 10px 10px #DD0000;
       box-shadow: 10px 10px #DD0000; }
 
@@ -397,10 +392,8 @@ footer {
   width: 70%;
   margin-left: 20%;
   -webkit-box-shadow: 10px 10px #DD0000;
-  box-shadow: 10px 10px #DD0000;
-  border-radius: 15px; }
+  box-shadow: 10px 10px #DD0000; }
   .final-pick-image img {
-    border-radius: 15px;
     border: 3px solid black; }
 
 .footer-bottom {
